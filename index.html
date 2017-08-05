@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>うずらインフォ・リパッチャー</title>
+</head>
+<body>
+    <h1>うずらインフォ・リパッチャー</h1>
+    <h2>STEP1: うずらインフォからアニメ一覧画像を保存</h2>
+    <a href="http://uzurainfo.han-be.com/">うずらインフォ</a>
+    <h2>STEP2: ファイルを選択</h2>
+    <input type="file" id="file" name="file" />
+    <output id="list"></output>
+    <img id="preview" />
+    <h2>STEP3: 変換する大きさを指定</h2>
+    <form name="sizeForm">
+        <input type="radio" name="ratio" value="paper-vertically" checked="checked" />用紙縦向き
+        <input type="radio" name="ratio" value="paper-horizontally" />用紙横向き
+        <input type="radio" name="ratio" value="row" />行数指定
+        <input id="rowSize" type="number" name="tate" value="4" />
+        <input type="radio" name="ratio" value="column" />列数指定
+        <input id="columnSize" type="number" name="yoko" value="4" />
+    </form>
+    <h2>STEP4: 変換を開始</h2>
+    <button id="start">変換開始</button>
+    <br />
+    <canvas hidden="hidden" id="canvas"></canvas>
+    <img id="result" />
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
